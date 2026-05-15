@@ -1,0 +1,27 @@
+[package]
+name = "use-constants"
+description = "Umbrella crate for the RustUse constants workspace"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+documentation = "https://docs.rs/use-constants"
+keywords = ["constants", "math", "physics", "chemistry"]
+
+[dependencies]
+use-astronomical-constants.workspace = true
+use-chemical-constants.workspace = true
+use-computing-constants.workspace = true
+use-earth-constants.workspace = true
+use-math-constants.workspace = true
+use-physical-constants.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

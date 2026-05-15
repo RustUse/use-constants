@@ -1,0 +1,69 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-math-constants"
+release = true
+version_group = "rustuse-constants"
+
+[[package]]
+name = "use-physical-constants"
+release = true
+version_group = "rustuse-constants"
+
+[[package]]
+name = "use-chemical-constants"
+release = true
+version_group = "rustuse-constants"
+
+[[package]]
+name = "use-computing-constants"
+release = true
+version_group = "rustuse-constants"
+
+[[package]]
+name = "use-astronomical-constants"
+release = true
+version_group = "rustuse-constants"
+
+[[package]]
+name = "use-earth-constants"
+release = true
+version_group = "rustuse-constants"
+
+[[package]]
+name = "use-constants"
+release = true
+version_group = "rustuse-constants"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-math-constants",
+  "use-physical-constants",
+  "use-chemical-constants",
+  "use-computing-constants",
+  "use-astronomical-constants",
+  "use-earth-constants",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]

@@ -1,0 +1,42 @@
+name: Facade Publish Readiness
+
+on:
+    workflow_dispatch:
+        inputs:
+            focused-crates-ready:
+                description: Confirm every focused crate is live on crates.io
+                required: true
+                type: boolean
+
+permissions:
+    contents: read
+
+jobs:
+    facade-release-readiness:
+        if: ${{ inputs.focused-crates-ready }}
+        name: Facade Publish Dry Run
+        runs-on: ubuntu-latest
+        env:
+            FOCUSED_CRATES: "use-math-constants use-physical-constants use-chemical-constants use-computing-constants use-astronomical-constants use-earth-constants"
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Install stable Rust toolchain
+              uses: actions-rust-lang/setup-rust-toolchain@v1
+              with:
+                  rustflags: ""
+                  cache-workspaces: |
+                      . -> target
+
+            - name: Confirm focused crates are visible on crates.io
+              run: |
+                  for crate in $FOCUSED_CRATES; do
+                    curl --fail --silent --show-error "https://crates.io/api/v1/crates/${crate}" > /dev/null
+                  done
+
+            - name: List packaged facade files
+              run: cargo package --list -p use-constants
+
+            - name: Dry-run publish use-constants
+              run: cargo publish --dry-run --allow-dirty -p use-constants
