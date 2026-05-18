@@ -21,7 +21,7 @@ jobs:
         use-math-constants use-physical-constants use-chemical-constants use-computing-constants use-astronomical-constants use-earth-constants
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install stable Rust toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
