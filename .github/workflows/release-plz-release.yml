@@ -1,6 +1,6 @@
 name: Release Publish Automation
 
-on:
+"on":
     push:
         branches:
             - main
@@ -27,8 +27,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             PUBLISHED_CRATES: >-
-                use-math-constants use-physical-constants use-chemical-constants
-                use-computing-constants use-astronomical-constants use-earth-constants use-constants
+              use-math-constants use-physical-constants use-chemical-constants use-computing-constants use-astronomical-constants use-earth-constants use-constants
         steps:
             - name: Check out repository
               uses: actions/checkout@v4

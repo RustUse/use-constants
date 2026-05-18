@@ -37,3 +37,13 @@ first-publish-candidates = [
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+expect_used = "warn"
+multiple_crate_versions = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
