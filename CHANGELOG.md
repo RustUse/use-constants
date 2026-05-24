@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [0.1.1](https://github.com/RustUse/use-constants/compare/use-constants-v0.1.0...use-constants-v0.1.1) - 2026-05-24
+
+### Changed
+
+- Add initial use-constants workspace and CI
+
 ### Added
 
 - Added the initial `use-constants` multi-crate workspace with focused crates for mathematical,
