@@ -4,19 +4,19 @@ version = 4
 
 [[package]]
 name = "use-astronomical-constants"
-version = "0.1.0"
+version = "0.2.0"
 
 [[package]]
 name = "use-chemical-constants"
-version = "0.1.0"
+version = "0.2.0"
 
 [[package]]
 name = "use-computing-constants"
-version = "0.1.0"
+version = "0.2.0"
 
 [[package]]
 name = "use-constants"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "use-astronomical-constants",
  "use-chemical-constants",
@@ -28,12 +28,12 @@ dependencies = [
 
 [[package]]
 name = "use-earth-constants"
-version = "0.1.0"
+version = "0.2.0"
 
 [[package]]
 name = "use-math-constants"
-version = "0.1.0"
+version = "0.2.0"
 
 [[package]]
 name = "use-physical-constants"
-version = "0.1.0"
+version = "0.2.0"

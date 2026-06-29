@@ -1,21 +1,21 @@
 [package]
 name = "use-earth-constants"
-description = "Reusable Earth and WGS84 constants for RustUse"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "earth", "wgs84", "geodesy"]
+description = "Reusable Earth and WGS84 constants for RustUse"
+homepage = "https://rustuse.org/use-constants/use-earth-constants"
+documentation = "https://docs.rs/use-earth-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-readme = "README.md"
-documentation = "https://docs.rs/use-earth-constants"
-keywords = ["constants", "earth", "wgs84", "geodesy"]
-categories = ["science", "mathematics"]
-
-[lints]
-workspace = true
+categories.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true

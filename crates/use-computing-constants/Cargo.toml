@@ -1,19 +1,21 @@
 [package]
 name = "use-computing-constants"
-description = "Reusable computing constants for RustUse"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "computing", "bytes", "storage"]
+description = "Reusable computing constants for RustUse"
+homepage = "https://rustuse.org/use-constants/use-computing-constants"
+documentation = "https://docs.rs/use-computing-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-computing-constants"
-keywords = ["constants", "computing", "bytes", "storage"]
-
-[lints]
-workspace = true
+categories.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true

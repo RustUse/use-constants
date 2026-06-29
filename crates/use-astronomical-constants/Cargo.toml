@@ -1,19 +1,21 @@
 [package]
 name = "use-astronomical-constants"
-description = "Reusable astronomical constants for RustUse"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "astronomy", "distance", "science"]
+description = "Reusable astronomical constants for RustUse"
+homepage = "https://rustuse.org/use-constants/use-astronomical-constants"
+documentation = "https://docs.rs/use-astronomical-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-astronomical-constants"
-keywords = ["constants", "astronomy", "distance", "science"]
-
-[lints]
-workspace = true
+categories.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true

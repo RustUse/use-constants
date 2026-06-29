@@ -1,19 +1,21 @@
 [package]
 name = "use-chemical-constants"
-description = "Reusable chemical and thermodynamic constants for RustUse"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "chemistry", "thermodynamics", "science"]
+description = "Reusable chemical and thermodynamic constants for RustUse"
+homepage = "https://rustuse.org/use-constants/use-chemical-constants"
+documentation = "https://docs.rs/use-chemical-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-chemical-constants"
-keywords = ["constants", "chemistry", "thermodynamics", "science"]
-
-[lints]
-workspace = true
+categories.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true

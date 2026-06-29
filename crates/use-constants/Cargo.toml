@@ -1,27 +1,48 @@
 [package]
 name = "use-constants"
-description = "Umbrella crate for the RustUse constants workspace"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "math", "physics", "chemistry"]
+description = "Umbrella crate for the RustUse constants workspace"
+homepage = "https://rustuse.org/use-constants"
+documentation = "https://docs.rs/use-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-constants"
-keywords = ["constants", "math", "physics", "chemistry"]
+categories.workspace = true
 
 [dependencies]
-use-astronomical-constants.workspace = true
-use-chemical-constants.workspace = true
-use-computing-constants.workspace = true
-use-earth-constants.workspace = true
-use-math-constants.workspace = true
-use-physical-constants.workspace = true
+use-astronomical-constants = { workspace = true, optional = true }
+use-chemical-constants = { workspace = true, optional = true }
+use-computing-constants = { workspace = true, optional = true }
+use-earth-constants = { workspace = true, optional = true }
+use-math-constants = { workspace = true, optional = true }
+use-physical-constants = { workspace = true, optional = true }
 
-[lints]
-workspace = true
+[features]
+default = []
+
+full = [
+    "astronomical-constants",
+    "chemical-constants",
+    "computing-constants",
+    "earth-constants",
+    "math-constants",
+    "physical-constants"
+]
+
+astronomical-constants = ["dep:use-astronomical-constants"]
+chemical-constants = ["dep:use-chemical-constants"]
+computing-constants = ["dep:use-computing-constants"]
+earth-constants = ["dep:use-earth-constants"]
+math-constants = ["dep:use-math-constants"]
+physical-constants = ["dep:use-physical-constants"]
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true
