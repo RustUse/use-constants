@@ -1,36 +1,22 @@
 #![forbid(unsafe_code)]
+#![doc = include_str!("../README.md")]
 
-//! Thin facade re-exports for the focused crates in the RustUse constants workspace.
+pub mod prelude;
 
-pub use use_astronomical_constants as astronomical;
-pub use use_chemical_constants as chemical;
-pub use use_computing_constants as computing;
-pub use use_earth_constants as earth;
-pub use use_math_constants as math;
-pub use use_physical_constants as physical;
+#[cfg(feature = "astronomical-constants")]
+pub use use_astronomical_constants as astronomical_constants;
 
-#[cfg(test)]
-mod tests {
-    use super::{astronomical, chemical, computing, earth, math, physical};
+#[cfg(feature = "chemical-constants")]
+pub use use_chemical_constants as chemical_constants;
 
-    fn runtime(value: f64) -> f64 {
-        value
-    }
+#[cfg(feature = "computing-constants")]
+pub use use_computing_constants as computing_constants;
 
-    fn runtime_usize(value: usize) -> usize {
-        value
-    }
+#[cfg(feature = "earth-constants")]
+pub use use_earth_constants as earth_constants;
 
-    #[test]
-    fn facade_reexports_domain_modules() {
-        assert_eq!(math::TAU, 2.0 * math::PI);
-        assert!(runtime(physical::SPEED_OF_LIGHT) > 0.0);
-        assert!(runtime(chemical::FARADAY_CONSTANT) > 0.0);
-        assert_eq!(
-            runtime_usize(computing::MEBIBYTE),
-            1024 * runtime_usize(computing::KIBIBYTE)
-        );
-        assert!(runtime(astronomical::LIGHT_YEAR) > runtime(astronomical::ASTRONOMICAL_UNIT));
-        assert!(runtime(earth::EARTH_RADIUS_MEAN) > 0.0);
-    }
-}
+#[cfg(feature = "math-constants")]
+pub use use_math_constants as math_constants;
+
+#[cfg(feature = "physical-constants")]
+pub use use_physical_constants as physical_constants;

@@ -1,19 +1,21 @@
 [package]
 name = "use-physical-constants"
-description = "Reusable physical constants for RustUse"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "physics", "si", "science"]
+description = "Reusable physical constants for RustUse"
+homepage = "https://rustuse.org/use-constants/use-physical-constants"
+documentation = "https://docs.rs/use-physical-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-physical-constants"
-keywords = ["constants", "physics", "si", "science"]
-
-[lints]
-workspace = true
+categories.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true

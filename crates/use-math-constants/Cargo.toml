@@ -1,20 +1,21 @@
 [package]
 name = "use-math-constants"
-description = "Reusable mathematical constants for RustUse"
+version = "0.2.0"
 publish = true
-version.workspace = true
+keywords = ["constants", "math", "pi", "tau"]
+description = "Reusable mathematical constants for RustUse"
+homepage = "https://rustuse.org/use-constants/use-math-constants"
+documentation = "https://docs.rs/use-math-constants"
+readme = "README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-math-constants"
-keywords = ["constants", "math", "pi", "tau"]
-categories = ["mathematics", "science"]
-
-[lints]
-workspace = true
+categories.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lints]
+workspace = true

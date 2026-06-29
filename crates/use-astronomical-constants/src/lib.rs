@@ -1,4 +1,5 @@
 #![forbid(unsafe_code)]
+#![doc = include_str!("../README.md")]
 
 //! Reusable astronomical constants expressed as plain `f64` values.
 
